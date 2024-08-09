@@ -1,0 +1,25 @@
+---
+
+import ExperienceItem from "./ExperienceItem.astro";
+
+const Exp = [
+  {
+    date: "Actualmente",
+    title: "Asistente de investigacion/Desarrollador - UCEVA",
+    description:
+      "Desarrollo de una aplicacion movil en convenio con la UDLA y UCEVA",
+  }
+
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+    {
+        Exp.map(Exp => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...Exp}>
+            </li> 
+        ))
+    }
+  
+</ol>

@@ -1,23 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 import SocialPill from "../components/SocialPill.astro";
 import LinkedIn from "../components/Icons/LinkedIn.astro";
 import Github from "../components/Icons/Github.astro";
 import Facebook from "../components/Icons/Facebook.astro";
 import Instagram from "../components/Icons/Instagram.astro";
+import Experience from "../components/Experience.astro";
+import Maleta from "../components/Icons/Maleta.astro";
 ---
 
-<Layout title="Portafolio">
-  <main>
-    <section class="w-full mx-auto lg:w-[740px] py-44">
-      <img
-        src="/waos.jpg"
-        alt="Tom-photo"
-        class="rounded-full w-20 h-20 mb-4"
-      />
+<Layout title="Portafolio de tom - Desarrollador web" description="Waos">
+  <main class="px-4">
+    <SectionContainer class="py-36 pb-24">
+      <img src="/waos.jpg" alt="Tom-photo" class="rounded-full size-20 mb-4" />
 
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
         Hola, Soy Johan
         <a
           class="flex justify-center items-center"
@@ -28,7 +29,7 @@ import Instagram from "../components/Icons/Instagram.astro";
           <Badge>Disponible para trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-2xl text-wrap">
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
         <span class="opacity-80">
           Estudiante de Ingeniería de Sistemas con una sólida formación en
           diversos lenguajes de programación, incluyendo
@@ -44,26 +45,33 @@ import Instagram from "../components/Icons/Instagram.astro";
           innovadores.
         </span>
       </h2>
-      <nav class="flex gap-x-2 mt-8">
+      <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialPill
           href="https://www.linkedin.com/in/johan-steven-ramirez-murcia-95ab80295/"
         >
-          <LinkedIn class="w-6 h-6" />
+          <LinkedIn class="size-4 md:size-6" />
           LinkedIn
         </SocialPill>
         <SocialPill href="https://github.com/Tom21-xd">
-          <Github class="w-6 h-6" />
+          <Github class="size-4 md:size-6" />
           Github
         </SocialPill>
         <SocialPill href="https://web.facebook.com/tom21xd/">
-          <Facebook class="w-6 h-6" />
+          <Facebook class="size-4 md:size-6" />
           Facebook
         </SocialPill>
         <SocialPill href="https://www.instagram.com/johanramirez48/">
-          <Instagram class="w-6 h-6" />
+          <Instagram class="size-4 md:size-6" />
           Instagram
         </SocialPill>
       </nav>
-    </section>
+    </SectionContainer>
+    <SectionContainer id="Experiencia">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Maleta class="size-7" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
   </main>
 </Layout>
