@@ -1,4 +1,26 @@
 ---
+import Css from "./Icons/Css.astro";
+import Html from "./Icons/Html.astro";
+import Js from "./Icons/Js.astro";
+
+const Tags = {
+  Css: {
+    name: "Css",
+    class: "bg-[#fffff] text-blue-400 border border-blue-400 ",
+    icon: Css,
+  },
+  Html: {
+    name: "Html",
+    class: "bg-[#fffff]  text-orange-400 border border-orange-400",
+    icon: Html,
+  },
+  Js: {
+    name: "Js",
+    class: "bg-[#fffff]  text-yellow-300 border border-yellow-300",
+    icon: Js,
+  },
+};
+
 const proyectos = [
   {
     title: "Encriptador de texto",
@@ -6,7 +28,7 @@ const proyectos = [
       "Encriptador Realizado para el challenges de alura x oracle ONE",
     img: "Projects/Encriptador.webp",
     url: "https://encriptador-delta-five.vercel.app/",
-    tags: ["Css", "Js", "Html"],
+    tags: [Tags.Html, Tags.Css, Tags.Js],
     github: "https://github.com/Tom21-xd/Encriptador",
   },
 ];
@@ -19,13 +41,20 @@ const proyectos = [
         {proyecto.title}
       </h3>
       <p class="text-lg mb-4 text-pretty">{proyecto.description}</p>
-      <ul class="">
+      <ul class="flex gap-x-4 flex-row mb-2">
         {proyecto.tags.map((tag) => (
-          <li>{tag}</li>
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
         ))}
       </ul>
       <img
-        class="rounded shadow-2xl shadow-white/10"
+        class="rounded shadow-2xl shadow-white/10 ]"
         src={proyecto.img}
         alt={proyecto.title}
       />

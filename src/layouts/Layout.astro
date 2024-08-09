@@ -2,6 +2,14 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "@fontsource-variable/onest";
+import {
+  Astronav,
+  MenuItems,
+  MenuIcon,
+  Dropdown,
+  DropdownItems,
+  DropdownSubmenu,
+} from "astro-navbar";
 
 interface Props {
   title: string;
@@ -59,5 +67,8 @@ const { description, title } = Astro.props;
     html {
       scroll-behavior: auto;
     }
+  }
+  .hidden {
+    display: none;
   }
 </style>
