@@ -15,21 +15,21 @@ import Projects from "../components/Projects.astro";
 ---
 
 <Layout title="Porfolio de tom - Desarrollador web" description="Waos">
-  <main class="">
+  <main class="px-4">
     <SectionContainer class="py-24 md:py-36 pb-16 md:pb-24">
       <img
-        src="/photo.jpeg"
+        src="/waos.jpg"
         alt="Tom-photo"
         class="rounded-full w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 mb-4"
       />
 
       <h1
-        class="text-[#595959] dark:text-white text-3xl text-pretty md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4 md:pb-6 lg:pb-10"
+        class="text-white text-3xl text-pretty md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4 md:pb-6 lg:pb-10"
       >
-        Hola, Soy Keiny
+        Hola, Soy Johan
         <a
           class="flex justify-center items-center"
-          href="https://www.linkedin.com/in/keiny-fernanda-trujillo-quiroz-514508271/"
+          href="https://www.linkedin.com/in/johan-steven-ramirez-murcia-95ab80295/"
           target="a_blank"
           rel="noopener"
         >
@@ -54,18 +54,22 @@ import Projects from "../components/Projects.astro";
       </h2>
       <nav class="flex gap-2 md:gap-4 mt-4 md:mt-8 flex-wrap">
         <SocialPill
-          href="https://www.linkedin.com/in/keiny-fernanda-trujillo-quiroz-514508271/"
+          href="https://www.linkedin.com/in/johan-steven-ramirez-murcia-95ab80295/"
         >
           <LinkedIn class="w-4 h-4 md:w-6 md:h-6" />
           LinkedIn
         </SocialPill>
-        <SocialPill href="https://github.com/kefertruqui">
+        <SocialPill href="https://github.com/Tom21-xd">
           <Github class="w-4 h-4 md:w-6 md:h-6" />
           Github
         </SocialPill>
-        <SocialPill href="https://web.facebook.com/keiny.trujillo">
+        <SocialPill href="https://web.facebook.com/tom21xd/">
           <Facebook class="w-4 h-4 md:w-6 md:h-6" />
           Facebook
+        </SocialPill>
+        <SocialPill href="https://www.instagram.com/johanramirez48/">
+          <Instagram class="w-4 h-4 md:w-6 md:h-6" />
+          Instagram
         </SocialPill>
       </nav>
     </SectionContainer>
@@ -99,15 +103,5 @@ import Projects from "../components/Projects.astro";
 
       <Projects />
     </SectionContainer>
-    <h2>Sobre mi</h2>
-    <SectionContainer />
   </main>
 </Layout>
-
-<style>
-  img{
-    object-fit: contain;
-    
-  }
-</style>
-
