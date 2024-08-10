@@ -1,15 +1,35 @@
 ---
-
+const nav_items = [
+  { title: "Inicio", label: "Inicio", url: "/#top" },
+  { title: "Sobre mi", label: "Sobre mi", url: "/#sobre-mi" },
+  { title: "Experiencia", label: "Experiencia", url: "/#Experiencia" },
+  { title: "Proyectos", label: "Proyectos", url: "/#Proyectos" },
+  {
+    title: "Contacto",
+    label: "Contacto",
+    url: "mailto:johans.ramirez@udla.edu.co",
+  },
+];
+import Tema from "./Tema.astro";
 ---
 
 <header class="flex justify-center items-center py-3 xl:w-[1120px] mx-auto">
-  <nav class="flex flex-col gap-x-10 gap-5 opacity-80">
-    <a href="#top">Inicio</a>
-    <a href="#sobre-mi">Sobre mi</a>
-    <a href="#Experiencia">Experiencia</a>
-    <a href="#Proyectos">Proyectos</a>
-    <a href="#contacto">Contacto</a>
+  <nav
+    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+  >
+    {
+      nav_items.map((link) => (
+        <a
+          class="relative block px-2 py-2 transition hover:text-purple-500 dark:hover:text-purple-400"
+          aria-label={link.label}
+          href={link.url}
+        >
+          {link.title}
+        </a>
+      ))
+    }
   </nav>
+  <Tema />
 </header>
 
 <style>
