@@ -1,7 +1,12 @@
 ---
+import Bootstrap from "./Icons/Bootstrap.astro";
+import Csharp from "./Icons/Csharp.astro";
 import Css from "./Icons/Css.astro";
 import Html from "./Icons/Html.astro";
 import Js from "./Icons/Js.astro";
+import Mysql from "./Icons/Mysql.astro";
+import Net from "./Icons/Net.astro";
+import Sparql from "./Icons/Sparql.astro";
 
 const Tags = {
   Css: {
@@ -11,13 +16,42 @@ const Tags = {
   },
   Html: {
     name: "Html",
-    class: "bg-[#fffff]  text-orange-400 border border-orange-400",
+    class:
+      "bg-[#fffff] text-black dark:text-orange-400 border border-orange-400",
     icon: Html,
   },
   Js: {
     name: "Js",
-    class: "bg-[#fffff]  text-yellow-300 border border-yellow-300",
+    class:
+      "bg-[#fffff] text-black dark:text-yellow-300 border border-yellow-300",
     icon: Js,
+  },
+  _Net: {
+    name: ".Net",
+    class:
+      "bg-[#fffff] text-black dark:text-purple-400 border border-purple-400",
+    icon: Net,
+  },
+  Mysql: {
+    name: "Mysql",
+    class: "bg-[#fffff] text-black dark:text-blue-400 border border-blue-400",
+    icon: Mysql,
+  },
+  Csharp: {
+    name: "C#",
+    class: "bg-[#fffff]  text-black dark:text-blue-400 border border-blue-400",
+    icon: Csharp,
+  },
+  Bootstrap: {
+    name: "Bootstrap",
+    class:
+      "bg-[#fffff]  text-black dark:text-purple-400 border border-purple-400",
+    icon: Bootstrap,
+  },
+  Spar: {
+    name: "SparQL",
+    class: "bg-[#fffff]  text-black dark:text-blue-400 border border-blue-400",
+    icon: Sparql,
   },
 };
 
@@ -30,6 +64,38 @@ const proyectos = [
     url: "https://encriptador-delta-five.vercel.app/",
     tags: [Tags.Html, Tags.Css, Tags.Js],
     github: "https://github.com/Tom21-xd/Encriptador",
+  },
+  {
+    title: "Sofware de reservas",
+    description: "Software de reservas dinamico con base de datos",
+    img: "Projects/Reservas.webp",
+    url: "",
+    tags: [
+      Tags.Html,
+      Tags.Css,
+      Tags.Js,
+      Tags.Mysql,
+      Tags._Net,
+      Tags.Csharp,
+      Tags.Bootstrap,
+    ],
+    Github: "https://github.com/Tom21-xd/Web",
+  },
+  {
+    title: "Web Semantica",
+    description:
+      "Web Semantica para la materia de gestion del conocimiento, tematica de peliculas",
+    img: "/Projects/Web_SemanticaPeli.webp",
+    url: "",
+    tags: [
+      Tags.Html,
+      Tags.Js,
+      Tags._Net,
+      Tags.Csharp,
+      Tags.Bootstrap,
+      Tags.Spar,
+    ],
+    Github: "https://github.com/Tom21-xd/WebSemantica",
   },
 ];
 ---

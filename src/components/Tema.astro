@@ -1,9 +1,9 @@
 ---
 import Sol from "./Icons/Sol.astro";
-import Luna from "./Icons/luna.astro";
-import Sistema from "./Icons/sistema.astro";
+import Luna from "./Icons/Luna.astro";
+import Sistema from "./Icons/Sistema.astro";
 
-const temas = ["light", "dark", "Sistema"];
+const temas = ["light", "dark", "system"];
 ---
 
 <div class="relative ml-1 mr-1">
@@ -12,7 +12,10 @@ const temas = ["light", "dark", "Sistema"];
     class="appearance-none border-none flex hover:scale-125 transition"
   >
     <span class="sr-only">Elige el tema</span>
-    <Sol id="light" class="theme-toggle-icon size-5 transition-all" />
+    <Sol
+      id="light"
+      class="theme-toggle-icon size-5 transition-all text-yellow-500"
+    />
     <Luna id="dark" class="theme-toggle-icon absolute size-5 transition-all" />
     <Sistema
       id="system"
@@ -26,7 +29,7 @@ const temas = ["light", "dark", "Sistema"];
     <ul>
       {
         temas.map((theme) => (
-          <li class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:+">
+          <li class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 text-black dark:text-white">
             {theme}
           </li>
         ))
