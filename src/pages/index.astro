@@ -43,12 +43,12 @@ import Projects from "../components/Projects.astro";
           Estudiante de Ingeniería de Sistemas y desarollador Backend y Frontend
           con experiencia en diversos lenguajes de programación y tecnologias
           como
-          <span class="text-[#EF4444]">
+          <span class="text-[#52734D] dark:text-[#91C788]">
             HTML, CSS, JavaScript, C#, .NET, SparQl, MySQL, MongoDB, Node.js,
-            Entre otros
           </span>
-          . Siempre estoy en la búsqueda de nuevas oportunidades para aprender y
-          desarrollar mis habilidades, con el objetivo de crear proyectos innovadores.
+          Entre otros. Siempre estoy en la búsqueda de nuevas oportunidades para
+          aprender y desarrollar mis habilidades, con el objetivo de crear proyectos
+          innovadores.
         </span>
       </h2>
       <nav class="flex gap-2 md:gap-4 mt-4 md:mt-8 flex-wrap">
@@ -73,6 +73,15 @@ import Projects from "../components/Projects.astro";
       </nav>
     </SectionContainer>
 
+    <SectionContainer id="Habilidades">
+      <h2
+        class="text-xl md:text-2xl font-semibold mb-4 md:mb-6 flex gap-x-2 md:gap-x-3 items-center text-black dark:text-white"
+      >
+        <Skill class="w-6 h-6 md:w-7 md:h-7" />
+        Habilidades
+      </h2>
+    </SectionContainer>
+
     <SectionContainer id="Experiencia">
       <h2
         class="text-xl md:text-2xl font-semibold mb-4 md:mb-6 flex gap-x-2 md:gap-x-3 items-center text-black dark:text-white"
@@ -81,15 +90,6 @@ import Projects from "../components/Projects.astro";
         Experiencia laboral
       </h2>
       <Experience />
-    </SectionContainer>
-
-    <SectionContainer id="Habilidades">
-      <h2
-        class="text-xl md:text-2xl font-semibold mb-4 md:mb-6 flex gap-x-2 md:gap-x-3 items-center text-black dark:text-white"
-      >
-        <Skill class="w-6 h-6 md:w-7 md:h-7" />
-        Habilidades
-      </h2>
     </SectionContainer>
 
     <SectionContainer id="Proyectos">
