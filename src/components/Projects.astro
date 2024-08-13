@@ -122,11 +122,11 @@ const proyectos = [
             {title}
           </h3>
           <div class="flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2">
+            <ul class="flex flex-wrap mb-2 gap-x-2">
               {tags.map((tag) => (
                 <li>
                   <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 mb-2 `}
                   >
                     <tag.icon class="size-4" />
                     {tag.name}
