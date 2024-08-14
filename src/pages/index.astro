@@ -12,6 +12,84 @@ import Maleta from "../components/Icons/Maleta.astro";
 import Skill from "../components/Icons/Skill.astro";
 import Code from "../components/Icons/Code.astro";
 import Projects from "../components/Projects.astro";
+import Net from "../components/Icons/Net.astro";
+import PowerBi from "../components/Icons/Power_Bi.astro";
+import Mysql from "../components/Icons/Mysql.astro";
+import Bootstrap from "../components/Icons/Bootstrap.astro";
+import Sparql from "../components/Icons/Sparql.astro";
+import Python from "../components/Icons/Py.astro";
+import Firebase from "../components/Icons/Firebase.astro";
+import Tailwind from "../components/Icons/Tailwind.astro";
+import Spring from "../components/Icons/Spring.astro";
+import Kotlin from "../components/Icons/Kotlin.astro";
+import Oracle from "../components/Icons/Oracle.astro";
+import Postgres from "../components/Icons/Postgres.astro";
+import waos from "../components/Icons/waos.astro";
+
+const habilidades = [
+  {
+    name: ".Net",
+    class:
+      "bg-[#fffff] text-black dark:text-purple-400 border border-purple-400",
+    icon: Net,
+  },
+  {
+    name: "Power Bi",
+    class: "",
+    icon: PowerBi,
+  },
+  {
+    name: "Mysql",
+    class: "bg-[#fffff] text-black dark:text-blue-400 border border-blue-400",
+    icon: Mysql,
+  },
+  {
+    name: "Bootstrap",
+    class:
+      "bg-[#fffff]  text-black dark:text-purple-400 border border-purple-400",
+    icon: Bootstrap,
+  },
+  {
+    name: "SparQL",
+    class: "bg-[#fffff]  text-black dark:text-blue-400 border border-blue-400",
+    icon: Sparql,
+  },
+  {
+    name: "Python",
+    class: "bg-[#fffff]  text-black dark:text-blue-400 border border-blue-400",
+    icon: Python,
+  },
+  {
+    name: "Firebase",
+    class: "bg-[#fffff]  text-black dark:text-blue-400 border border-blue-400",
+    icon: Firebase,
+  },
+  {
+    name: "Tailwind",
+    class: "bg-[#fffff]  text-black dark:text-blue-400 border border-blue-400",
+    icon: Tailwind,
+  },
+  {
+    name: "Spring",
+    class: "bg-[#fffff]  text-black dark:text-blue-400 border border-blue-400",
+    icon: Spring,
+  },
+  {
+    name: "Kotlin",
+    class: "bg-[#fffff]  text-black dark:text-blue-400 border border-blue-400",
+    icon: Kotlin,
+  },
+  {
+    name: "Oracle",
+    class: "bg-[#fffff]  text-black dark:text-blue-400 border border-blue-400",
+    icon: Oracle,
+  },
+  {
+    name: "Postgres",
+    class: "bg-[#fffff]  text-black dark:text-blue-400 border border-blue-400",
+    icon: Postgres,
+  },
+];
 ---
 
 <Layout title="Porfolio de tom - Desarrollador web" description="Waos">
@@ -73,15 +151,65 @@ import Projects from "../components/Projects.astro";
       </nav>
     </SectionContainer>
 
-    <SectionContainer id="Habilidades">
+    <SectionContainer id="Habilidades" , class="flex-wrap">
       <h2
-        class="text-xl md:text-2xl font-semibold mb-4 md:mb-6 flex gap-x-2 md:gap-x-3 items-center text-black dark:text-white"
+        class="text-xl md:text-2xl font-semibold mb-10 md:mb-6 flex gap-x-2 md:gap-x-3 items-center text-black dark:text-white"
       >
         <Skill class="w-6 h-6 md:w-7 md:h-7" />
         Habilidades
       </h2>
-    </SectionContainer>
 
+      <div class="flex flex-wrap items-center justify-center">
+        {
+          habilidades.map((hab) => (
+            <div class="skill ">
+              <hab.icon class="size-20 skill-icon" />
+              <span class="tooltip">{hab.name}</span>
+            </div>
+          ))
+        }
+      </div>
+      <style>
+        .skill {
+          position: relative;
+          display: inline-block;
+          margin: 20px;
+          transition: transform 0.3s ease-in-out;
+        }
+
+        .skill-icon {
+          width: 60px;
+          height: 60px;
+          transition: transform 0.3s ease-in-out;
+        }
+
+        .tooltip {
+          visibility: hidden;
+          width: 80px;
+          background-color: black;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+          position: absolute;
+          z-index: 1;
+          bottom: -70%;
+          left: 50%;
+          margin-left: -40px;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+
+        .skill:hover .skill-icon {
+          transform: scale(1.1);
+        }
+
+        .skill:hover .tooltip {
+          visibility: visible;
+          opacity: 1;
+        }
+      </style>
+    </SectionContainer>
     <SectionContainer id="Experiencia">
       <h2
         class="text-xl md:text-2xl font-semibold mb-4 md:mb-6 flex gap-x-2 md:gap-x-3 items-center text-black dark:text-white"
