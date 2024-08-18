@@ -89,6 +89,11 @@ const habilidades = [
     class: "bg-[#fffff]  text-black dark:text-blue-400 border border-blue-400",
     icon: Postgres,
   },
+  {
+    name: "Astro",
+    class: "bg-[#fffff]  text-black dark:text-blue-400 border border-blue-400",
+    icon: waos,
+  },
 ];
 ---
 
@@ -214,19 +219,21 @@ const habilidades = [
       <h2
         class="text-xl md:text-2xl font-semibold mb-4 md:mb-6 flex gap-x-2 md:gap-x-3 items-center text-black dark:text-white"
       >
-        <Maleta class="w-6 h-6 md:w-7 md:h-7" />
+        <Maleta class="size-6 md:size-7" />
         Experiencia laboral
       </h2>
       <Experience />
     </SectionContainer>
 
     <SectionContainer id="Proyectos">
-      <h2
-        class="text-xl md:text-2xl font-semibold mb-4 md:mb-6 flex gap-x-2 md:gap-x-3 items-center text-black dark:text-white"
-      >
-        <Code class="w-6 h-6 md:w-7 md:h-7" />
-        Proyectos
-      </h2>
+      <div class="flex justify-between items-center mb-6">
+        <h2
+          class="text-xl md:text-2xl font-semibold flex gap-x-2 md:gap-x-3 text-black dark:text-white"
+        >
+          <Code class="w-6 h-6 md:w-7 md:h-7" />
+          Proyectos
+        </h2>
+      </div>
 
       <Projects />
     </SectionContainer>
